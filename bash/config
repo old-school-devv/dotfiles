@@ -1,0 +1,6 @@
+export DATETE=`date "+%y%m%d%H%M%S"`
+export HISTCONTROL=erasedups
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000
+shopt -s histappend
+#export HISTFILE=$HOME/.histories/.bash_history_$DATETE

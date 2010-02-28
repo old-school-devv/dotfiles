@@ -1,0 +1,42 @@
+alias ralle='ssh -l ral00-ralle das-netzbuch.de'
+alias ralle2='ssh -l ral00-ralle2 das-netzbuch.de'
+#alias gateway='ssh -l root gateway.local'
+alias rattengoettin='ssh -l ralf rattengoettin.local'
+alias machine2='ssh -l ralle machine2.uninformation.org'
+alias 2klix='ssh -l ralf 85.10.203.152'
+#alias ping247='ssh -l rgraf 194.0.163.3 -p 2222'
+alias blinkenfilme='ssh -l ssh-217490-blinkenfilme blinkenfilme.de'
+alias medual='ssh -l ralf dev.medual.net'
+alias medualrails='ssh -l rails dev.medual.net'
+alias naturkost='ssh -l ssh-174786-ralf naturkost.com'
+alias lsa='ls -al'
+alias wgetdex='wget -r -l1 -H -t1 -nd -N -np -A.mp3'
+alias wgetdex4='wget -r -l1 -H -t1 -nd -N -np -A.mp4'
+alias ls='ls -FG'
+alias ll='ls -AGlFTtr'
+alias histories='cat ~/.histories/.bash*'
+alias ql='qlmanage -p "$@" >& /dev/null'
+alias lc="cl"
+alias tcpdumper='sudo tcpdump -s 0 -A -i en1 port 80'
+alias privoxy_start='privoxy /usr/local/etc/privoxy/config'
+alias gitcm='git commit -a -m'
+alias gitcam='git commit -a -m'
+alias gitst='git status'
+alias gitsta='git status'
+alias mysqlmy='mysql -u root -p'
+
+function cl () {
+   if [ $# = 0 ]; then
+      cd && ll
+   else
+      cd "$*" && ll
+   fi
+}
+export PS1='\u@\h:\w\$ '
+
+
+#Edge-Rails
+function edgie() { 
+  ruby ~/rails/edge/railties/bin/rails $1 && cd $1 && ln -s ~/rails/edge vendor/rails && mate . 
+}
+
