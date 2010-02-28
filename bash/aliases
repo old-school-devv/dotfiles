@@ -21,7 +21,6 @@ function cl () {
       cd "$*" && ll
    fi
 }
-export PS1='\u@\h:\w\$ '
 
 
 #Edge-Rails
