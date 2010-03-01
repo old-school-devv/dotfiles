@@ -42,4 +42,6 @@ txtrst='\e[0m'    # Text Reset
 
 #PS1="\n\u: \w" 
 #export PS1='\u@\h:\w\$ '
-export PS1="\u@\h:\w \[$txtgrn\]$(vcprompt)\[$txtrst\] \n$ "
+#export PS1="\u@\h:\w \[$txtgrn\]$(vcprompt)\[$txtrst\] \n$ "
+export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\] \n$ "
+
