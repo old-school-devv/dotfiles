@@ -13,6 +13,7 @@ alias gitcam='git commit -a -m'
 alias gitst='git status'
 alias gitsta='git status'
 alias mysqlmy='mysql -u root -p'
+alias apinfo='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
 
 function cl () {
    if [ $# = 0 ]; then
@@ -28,3 +29,8 @@ function edgie() {
   ruby ~/rails/edge/railties/bin/rails $1 && cd $1 && ln -s ~/rails/edge vendor/rails && mate . 
 }
 
+# Manpage in Preview anzeigen
+# http://news.ycombinator.com/item?id=1157864
+function pdfman () {
+	man -t $1 | open -a /Applications/Preview.app -f
+}
