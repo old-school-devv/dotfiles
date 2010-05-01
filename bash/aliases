@@ -26,6 +26,12 @@ function cl () {
    fi
 }
 
+#mkdir, cd into it
+# http://onethingwell.org/post/561049890
+function mkcd {
+    mkdir $1
+    cd $1
+}
 
 #Edge-Rails
 function edgie() { 
