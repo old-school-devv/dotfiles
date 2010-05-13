@@ -1,6 +1,4 @@
 alias lsa='ls -al'
-alias wgetdex='wget -r -l1 -H -t1 -nd -N -np -A.mp3'
-alias wgetdex4='wget -r -l1 -H -t1 -nd -N -np -A.mp4'
 alias ls='ls -FG'
 alias ll='ls -AGlFTtr'
 alias histories='cat ~/.histories/.bash*'
