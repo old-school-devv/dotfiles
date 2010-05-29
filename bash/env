@@ -1,5 +1,5 @@
 # /opt/local/bin: erst mal rausgneommen
-export PATH='~/bin:/usr/local/git/bin:'$PATH':/usr/local/mysql/bin:/usr/local/bin/:/usr/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin'
+export PATH='~/bin:/usr/local/git/bin:'$PATH':/usr/local/mysql/bin:/usr/local/bin/:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin'
 
 # Auch Manpages aus /usr/local anzeigen
 export MANPATH="/usr/local/man:$MANPATH"

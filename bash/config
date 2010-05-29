@@ -46,7 +46,7 @@ txtrst='\e[0m'    # Text Reset
 #export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\] \n∴ "
 #export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\] \n$ "
 
-if [ $LANG = "de_DE.UTF-8" ]; then
+if [ $LANG == "de_DE.UTF-8" ]; then
 	export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\] \n∴ "
 else
 	export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\] \n$ "
