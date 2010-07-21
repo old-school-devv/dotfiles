@@ -12,8 +12,8 @@ alias gitst='git status'
 alias gitsta='git status'
 alias mysqlmy='mysql -u root -p'
 alias apinfo='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
-alias sc="script/console"
-alias ss="script/server"
+#alias sc="script/console"
+#alias ss="script/server"
 alias rt="rake test"
 
 function cl () {
@@ -40,4 +40,20 @@ function edgie() {
 # http://news.ycombinator.com/item?id=1157864
 function pdfman () {
 	man -t $1 | open -a /Applications/Preview.app -f
+}
+
+function ss {
+	if [ -f script/server ]; then
+		script/server
+	else
+		rails server
+	fi
+}
+
+function sc {
+	if [ -f script/console ]; then
+		script/console
+	else
+		rails console
+	fi
 }
