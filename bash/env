@@ -1,5 +1,5 @@
 # /opt/local/bin: erst mal rausgneommen
-export PATH='~/bin:/usr/local/git/bin:'$PATH':/usr/local/sbin'
+export PATH='~/bin:/usr/local/git/bin:'$PATH':/usr/local/sbin:/usr/local/mysql/bin'
 
 # Auch Manpages aus /usr/local anzeigen
 export MANPATH="/usr/local/man:$MANPATH"
