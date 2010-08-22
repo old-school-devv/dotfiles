@@ -2,6 +2,7 @@ set nocompatible
 let mapleader=","
 
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 filetype plugin indent on
 " colorscheme ir_black
@@ -18,4 +19,12 @@ set backspace=indent,eol,start
 
 " Fuzzy finder: ignore stuff that can't be opened, and generated files
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
+
+" http://stackoverflow.com/questions/1447334/how-do-you-add-nerdtree-to-your-vimrc/1447618#1447618
+function OpenNERDTree()
+  execute ":NERDTree"
+endfunction
+command -nargs=0 OpenNERDTree :call OpenNERDTree()
+
+nmap <ESC>t :OpenNERDTree<CR>
 
