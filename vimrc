@@ -1,4 +1,6 @@
 set nocompatible
+# pathogen
+call pathogen#runtime_append_all_bundles()
 
 filetype plugin indent on
 " colorscheme ir_black
