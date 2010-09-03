@@ -2,5 +2,5 @@
 :set columns=154
 :set lines=44
 :set linespace=3
-:set transparency=10
+:set transparency=0
 
