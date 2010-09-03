@@ -6,7 +6,8 @@ call pathogen#helptags()
 
 filetype plugin indent on
 " colorscheme ir_black
-colorscheme digerati
+" colorscheme digerati
+colorscheme vividchalk 
 syntax on
 
 set columns=120
