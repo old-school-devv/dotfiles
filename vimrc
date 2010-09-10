@@ -18,6 +18,10 @@ set grepprg=ack
 set tags=./tags
 set backspace=indent,eol,start
 
+" Tab-Stops wie n vimcast tidying whitespace
+set tabstop=2
+set noexpandtab
+
 " Fuzzy finder: ignore stuff that can't be opened, and generated files
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
