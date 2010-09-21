@@ -3,6 +3,7 @@
 :set lines=44
 :set linespace=3
 :set transparency=0
+:set encoding=utf-8
 
 " Bsp. for conditionals depending on used platform
 " http://github.com/coderifous/dotfiles/blob/master/vim/gvimrc

@@ -38,13 +38,15 @@ nmap <ESC>t :OpenNERDTree<CR>
 nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:¿\ ,eol:¬
-
+	
 function! s:Terminal()
   execute 'ConqueTermSplit bash --login'
 endfunction
 command! Terminal call s:Terminal()
 
 nmap <leader>t :TlistToggle<CR>
+
+nmap <leader>w <C-w>v<C-w>l
 
 " füge eine zeile mit datum als trenner ein
 " nach http://0x7c0.wordpress.com/2009/06/18/vim-abbreviations/
