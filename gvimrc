@@ -2,13 +2,13 @@
 :set columns=154
 :set lines=44
 :set linespace=3
-:set transparency=0
 :set encoding=utf-8
 
 " Bsp. for conditionals depending on used platform
 " http://github.com/coderifous/dotfiles/blob/master/vim/gvimrc
 if has("gui_macvim")
   set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
+	set transparency=0
 "  set guifont=Monaco:h12
 "  set guioptions-=T  " remove toolbar
 "  set guicursor=a:blinkon0
