@@ -1,6 +1,3 @@
-:set gfn=Anonymous\ Pro:h14
-:set columns=154
-:set lines=44
 :set linespace=3
 :set encoding=utf-8
 
@@ -9,6 +6,9 @@
 if has("gui_macvim")
   set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
 	set transparency=0
+	set gfn=Anonymous\ Pro:h14
+	set columns=154
+	set lines=44
 "  set guifont=Monaco:h12
 "  set guioptions-=T  " remove toolbar
 "  set guicursor=a:blinkon0
@@ -22,7 +22,10 @@ if has("gui_macvim")
 "  nnoremap <D-M-right> :tabnext<CR>
 "  nnoremap <D-M-left> :tabprev<CR>
 elseif has("gui_gtk2")
-"  set guifont=Monaco
+  set guifont=Inconsolata\ 11
+	"set guifont=Anonymous\ Pro\ 11
+	set columns=115
+	set lines=32
 "  set guioptions-=T  " remove toolbar
 elseif has("x11")
 elseif has("gui_win32")
