@@ -50,17 +50,17 @@ function pdfman () {
 }
 
 function ss {
-	if [ -f script/server ]; then
-		script/server
+	if [ -f ./script/rails ]; then 
+		rails s $argv
 	else
-		rails server
+		./script/server $argv
 	fi
 }
 
 function sc {
-	if [ -f script/console ]; then
-		script/console
+	if [ -f ./script/rails ]; then 
+		rails c $argv
 	else
-		rails console
+		./script/console $argv
 	fi
 }
