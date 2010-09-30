@@ -48,6 +48,13 @@ nmap <leader>t :TlistToggle<CR>
 
 nmap <leader>w <C-w>v<C-w>l
 
+" wg. rubycomplete
+" http://blog.hasno.info/vim-7-ruby-omni-completion
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+
 " füge eine zeile mit datum als trenner ein
 " nach http://0x7c0.wordpress.com/2009/06/18/vim-abbreviations/
 iabbrev dts ---------------------------------------------------<CR><C-R>=strftime("%d %b %Y, %h:%M%")<CR> 
