@@ -31,11 +31,11 @@ function cl () {
    fi
 }
 
-#mkdir, cd into it
-# http://onethingwell.org/post/561049890
-function mkcd {
-    mkdir $1
-    cd $1
+# http://onethingwell.org/post/586977440/mkcd-improved
+# mkdir, cd into it
+function mkcd () {
+	mkdir -p "$*"
+	cd "$*"
 }
 
 #Edge-Rails
