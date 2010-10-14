@@ -55,6 +55,9 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
+" http://dailyvim.tumblr.com/post/1262764095/additional-ruby-syntax-highlighting
+au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
+
 " füge eine zeile mit datum als trenner ein
 " nach http://0x7c0.wordpress.com/2009/06/18/vim-abbreviations/
 iabbrev dts ---------------------------------------------------<CR><C-R>=strftime("%d %b %Y, %h:%M%")<CR> 
