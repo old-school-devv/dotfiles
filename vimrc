@@ -17,6 +17,7 @@ set number
 set grepprg=ack
 set tags=./tags
 set backspace=indent,eol,start
+set hidden
 
 " Tab-Stops wie n vimcast tidying whitespace
 set tabstop=2
@@ -39,6 +40,12 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:¿\ ,eol:¬
 	
+" Shortcut minibufexplorer
+nmap <leader>b :MiniBufExplorer<CR>
+
+" keine ruby-warnung beum lusty-juggler
+let g:LustyJugglerSuppressRubyWarning = 1
+
 function! s:Terminal()
   execute 'ConqueTermSplit bash --login'
 endfunction
