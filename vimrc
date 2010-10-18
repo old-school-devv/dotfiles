@@ -57,6 +57,9 @@ nmap <leader>f :TlistToggle<CR>
 " split horizontal von der aktuellen datei
 nmap <leader>w <C-w>v<C-w>l
 
+" Todo/Task-List Plugin
+nmap <leader>o <Plug>TaskList
+
 " wg. rubycomplete
 " http://blog.hasno.info/vim-7-ruby-omni-completion
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
