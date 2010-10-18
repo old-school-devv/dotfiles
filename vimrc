@@ -51,8 +51,10 @@ function! s:Terminal()
 endfunction
 command! Terminal call s:Terminal()
 
-nmap <leader>t :TlistToggle<CR>
+" Liste mit den Funktionen
+nmap <leader>f :TlistToggle<CR>
 
+" split horizontal von der aktuellen datei
 nmap <leader>w <C-w>v<C-w>l
 
 " wg. rubycomplete
