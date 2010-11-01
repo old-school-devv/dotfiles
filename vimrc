@@ -19,6 +19,11 @@ set tags=./tags
 set backspace=indent,eol,start
 set hidden
 
+" nix swp
+set nobackup
+set nowritebackup
+set noswapfile
+
 " Tab-Stops wie n vimcast tidying whitespace
 set tabstop=2
 set noexpandtab
