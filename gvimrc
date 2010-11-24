@@ -9,6 +9,8 @@ if has("gui_macvim")
 	set gfn=Anonymous\ Pro:h14
 	set columns=154
 	set lines=44
+	" PeepOpen auf CommandT:
+	map <D-t> <Plug>PeepOpen
 "  set guifont=Monaco:h12
 "  set guioptions-=T  " remove toolbar
 "  set guicursor=a:blinkon0
