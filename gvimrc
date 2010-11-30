@@ -11,24 +11,26 @@ if has("gui_macvim")
 	set lines=44
 	" PeepOpen auf CommandT:
 	map <D-t> <Plug>PeepOpen
-"  set guifont=Monaco:h12
-"  set guioptions-=T  " remove toolbar
-"  set guicursor=a:blinkon0
+	" Symbolleiste weg:
+	set guioptions=egmrt
+	"  set guifont=Monaco:h12
+	"  set guioptions-=T  " remove toolbar
+	"  set guicursor=a:blinkon0
   " Unmap Apple+T and Shift+Apple+T
-"  macmenu &File.Open\ Tab\.\.\. key=<nop>
+	"  macmenu &File.Open\ Tab\.\.\. key=<nop>
   " FuzzyFinder
-"  nnoremap <D-T> :FuzzyFinderTextMate<CR>
+	"  nnoremap <D-T> :FuzzyFinderTextMate<CR>
   " NerdTree
-"  nnoremap <D-e> :NERDTreeToggle<CR>
+	"  nnoremap <D-e> :NERDTreeToggle<CR>
   " Tab navigation like FF and TM
-"  nnoremap <D-M-right> :tabnext<CR>
-"  nnoremap <D-M-left> :tabprev<CR>
+	"  nnoremap <D-M-right> :tabnext<CR>
+	"  nnoremap <D-M-left> :tabprev<CR>
 elseif has("gui_gtk2")
   set guifont=Inconsolata\ 11
 	"set guifont=Anonymous\ Pro\ 11
 	set columns=115
 	set lines=32
-"  set guioptions-=T  " remove toolbar
+	"  set guioptions-=T  " remove toolbar
 elseif has("x11")
 elseif has("gui_win32")
 end
