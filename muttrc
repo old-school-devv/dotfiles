@@ -1,0 +1,99 @@
+# Anpassung Datum und Indexzeile!
+set date_format="%d.%m. (%H:%M)"
+set index_format="%3C %Z %d %-15.15F (%4l) %s"
+set to_chars="ZTGCF"
+
+set pager_context=0
+set timeout=120
+set pager_index_lines=10
+
+send-hook .* set signature="~/.sig"
+
+charset-hook us-ascii ISO-8859-1
+
+set attribution="%n schrieb am %d:"
+set charset="iso-8859-1"
+set send_charset="iso-8859-1"
+set envelope_from
+# Bloede Frage am Ende abschalten!
+set move=no
+set delete=yes
+set mark_old=no
+set sort=threads
+
+
+# wg. Umlauten:
+unset allow_8bit
+
+# Headers to ignore
+ignore *
+unignore date from to cc subject x-mailer resent-from reply-to user-agent X-Keywords 
+
+
+#Farben fuer die Header:
+color header brightgreen black ^From:
+color header brightcyan black ^To:
+color header brightcyan black ^Reply-To:
+color header brightcyan black ^Cc:
+color header brightgreen black ^Subject:
+color header green black ^Date:
+color header brightblue black ^x-mailer:
+color header brightblue black ^user-agent:
+color header brightblack black ^X-Keywords:
+color header brightblack black ^X-Mailtags:
+
+#'Highlighte' Mails an mich:
+color index white black '.*' 
+color index cyan black ~P
+color quoted green black
+
+#Header ignorieren:
+#ignore envelope-to delivery-date in-reply-to x-priority precedence
+#ignore x-envelope-sender resent-message-id resent-from x-loop
+#ignore resent-sender resent-bcc resent-date mailing-list delivered-to
+
+set editor="vim -c 'set tw=72 et'" # set vim as editor
+
+# STATUSZEILE: Ob ich das will weiss ich noch nicht,
+# daher letzte Zeile auskommentiert!
+
+# The status bar tells me about the current mailbox
+#
+# %r mailbox altered; %P percentage of the way down the list of messages;
+# %f filename; %?l?%l? size; (%?n?%n\/?%m) new/total no. of messages;
+# %?d? Del:%d? no. of deleted messages; %?F? Flag:%F? no. of flagged messages
+# %?t? Tag:%t? no. of tagged messages; %?p? Post:%p? no. of postponed messages
+# %>- right-align the following and pad the line with ---
+# (%s/%S) sort order; %?b?- %b folders? no. of folders containing new mail
+#
+# I set all this with "set status_format"
+set status_format="%r %P - %f %?l?%l? (%?n?%n\/?%m)%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p? %>-(%s/%S) %?b?- %b folders?"
+color status brightwhite green 
+#color status white blue
+# ENDE STATUSZEILE
+
+set pgp_create_traditional="yes"
+set pgp_decode_command="gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
+set pgp_verify_command="gpg --no-verbose --batch --output - --verify %s %f"
+set pgp_decrypt_command="gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
+set pgp_sign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --detach-sign --textmode %?a?-u %a? %f"
+set pgp_clearsign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --textmode --clearsign %?a?-u %a? %f"
+set pgp_encrypt_only_command="pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0xC9C40C31 -- -r %r -- %f"
+set pgp_encrypt_sign_command="pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0xC9C40C31 -- -r %r -- %f"
+set pgp_import_command="gpg --no-verbose --import -v %f"
+set pgp_export_command="gpg --no-verbose --export --armor %r"
+set pgp_verify_key_command="gpg --no-verbose --batch --fingerprint --check-sigs %r"
+set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons --list-keys %r" 
+set pgp_list_secring_command="gpg --no-verbose --batch --with-colons --list-secret-keys %r" 
+set pgp_autosign=yes
+set pgp_sign_as=0x413E9911
+set pgp_replyencrypt=yes
+set pgp_timeout=1800
+set pgp_good_sign="^gpg: Good signature from"
+
+# Macros
+macro index A "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+# Suchen mit mairix
+# http://wiki.mutt.org/?UserStory/SearchingMail
+macro generic ,f "<shell-escape>mairix " "search via mairix"
+
