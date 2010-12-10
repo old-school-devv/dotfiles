@@ -30,7 +30,7 @@ elseif has("gui_gtk2")
 	"set guifont=Anonymous\ Pro\ 11
 	set columns=115
 	set lines=32
-	"  set guioptions-=T  " remove toolbar
+	set guioptions-=T  " remove toolbar
 elseif has("x11")
 elseif has("gui_win32")
 end
