@@ -10,7 +10,11 @@
 # This sets a black background
 
 /usr/bin/fbsetroot -solid black
-fbsetbg -f ~/wallpaper/Talento-1.jpg
+
+# Mint-style wallpaper
+#fbsetbg -f ~/wallpaper/Talento-1.jpg
+# This means war
+fbsetbg -C ~/wallpaper/mark-weaver-768.jpg
 
 # Maus abbremsen
 xset m 2 10
@@ -44,7 +48,10 @@ setxkbmap -option "lv3:lwin_switch"
 # wmnd &
 # wmsmixer -w &
 # idesk &
-gnome-do &
+
+# kupfer statt gnome-do
+#gnome-do &
+kupfer &
 
 urxvtd &
 
