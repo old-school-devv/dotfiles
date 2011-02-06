@@ -68,7 +68,7 @@ session.screen0.menuMode:	Delay
 session.screen0.followModel:	Ignore
 session.screen0.workspaceNames: eins,zwei,drei,vier,fünf,sechs,sieben,acht	
 session.screen0.clickRaises:	true
-session.screen0.workspaces:	8
+session.screen0.workspaces: 4	
 session.screen0.showwindowposition:	true
 session.screen0.workspacewarping:	true
 session.screen0.windowScrollReverse:	false
