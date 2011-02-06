@@ -1,0 +1,13 @@
+[app] (name=fbrun)
+  [Position]	(CENTER)	{0 0}
+  [Layer]	{2}
+[end]
+[app] (name=lxterminal) (class=Lxterminal)
+  [Dimensions]	{653 464}
+  [Close]	{yes}
+[end]
+[app] (name=hotot) (class=Hotot)
+  [Dimensions]	{460 678}
+  [Position]	(UPPERLEFT)	{558 6}
+  [Close]	{yes}
+[end]
