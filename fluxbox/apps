@@ -7,7 +7,11 @@
   [Close]	{yes}
 [end]
 [app] (name=hotot) (class=Hotot)
-  [Dimensions]	{460 678}
-  [Position]	(UPPERLEFT)	{558 6}
+  [Dimensions]	{551 686}
+  [Position]	(UPPERLEFT)	{111 26}
+  [Close]	{yes}
+[end]
+[app] (name=pcmanfm) (class=Pcmanfm)
+  [Dimensions]	{917 665}
   [Close]	{yes}
 [end]

@@ -15,6 +15,7 @@
 #fbsetbg -f ~/wallpaper/Talento-1.jpg
 # This means war
 fbsetbg -C ~/wallpaper/mark-weaver-768.jpg
+#fbsetbg -C ~/wallpaper/january-11-twisted_winter-768.jpg 
 
 # Maus abbremsen
 xset m 2 10
