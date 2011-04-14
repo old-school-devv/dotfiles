@@ -37,3 +37,6 @@
 [submodule "vim/bundle/taskpaper"]
 	path = vim/bundle/taskpaper
 	url = https://github.com/davidoc/taskpaper.vim.git
+[submodule "vim/bundle/coffeescript"]
+	path = vim/bundle/coffeescript
+	url = git://github.com/kchmck/vim-coffee-script.git
