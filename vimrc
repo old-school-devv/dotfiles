@@ -63,6 +63,9 @@ nmap <leader>f :TlistToggle<CR>
 " split horizontal von der aktuellen datei
 nmap <leader>w <C-w>v<C-w>l
 
+" split vertikal
+nmap <leader>v :vsplit<CR>
+
 " Todo/Task-List Plugin
 nmap <leader>o <Plug>TaskList
 
