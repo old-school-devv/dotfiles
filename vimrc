@@ -8,7 +8,6 @@ filetype plugin indent on
 " colorscheme ir_black
 " colorscheme digerati
 colorscheme jellybeans 
-" colorscheme vividchalk 
 syntax on
 
 " mehr statusline: http://dailyvim.tumblr.com/post/1048170831/the-status-line
@@ -66,8 +65,14 @@ nmap <leader>w <C-w>v<C-w>l
 " split vertikal
 nmap <leader>v :vsplit<CR>
 
+" Ack mit Leader a
+nmap <leader>a :Ack 
+
 " Todo/Task-List Plugin
 nmap <leader>o <Plug>TaskList
+
+" Leichter durch die Buffer
+ map <S-D-+> :bprev<CR>
 
 " wg. rubycomplete
 " http://blog.hasno.info/vim-7-ruby-omni-completion
