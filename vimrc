@@ -71,6 +71,10 @@ nmap <leader>a :Ack
 " Todo/Task-List Plugin
 nmap <leader>o <Plug>TaskList
 
+" Registers
+" http://dailyvim.tumblr.com/post/6756136441/copying-and-moving
+nmap <leader>r :registers<CR>
+
 " wg. rubycomplete
 " http://blog.hasno.info/vim-7-ruby-omni-completion
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
