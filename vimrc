@@ -71,9 +71,6 @@ nmap <leader>a :Ack
 " Todo/Task-List Plugin
 nmap <leader>o <Plug>TaskList
 
-" Leichter durch die Buffer
- map <S-D-+> :bprev<CR>
-
 " wg. rubycomplete
 " http://blog.hasno.info/vim-7-ruby-omni-completion
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
