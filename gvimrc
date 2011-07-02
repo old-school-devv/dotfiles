@@ -15,13 +15,11 @@ if has("gui_macvim")
 	set guioptions=egmrt
 	
 	" http://featurebranch.com/2011/macvim-navigate-open-files-with-cmd-ctrl-leftright/
-	" Remove default keybindings for Command-Control-Left/Right
-  macmenu Tools.Next\ Error key=<C-D-N>
-  macmenu Tools.Previous\ Error key=<C-D-P>
   " switch to previous buffer
-  map <C-D-Left> :bp<CR>
+	" RG auf Alt-Cmd umgestellt
+  map <M-D-Left> :bp<CR>
   " switch to next buffer
-  map <C-D-Right> :bN<CR>
+  map <M-D-Right> :bN<CR>
 	
 	"  set guifont=Monaco:h12
 	"  set guioptions-=T  " remove toolbar
