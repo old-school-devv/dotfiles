@@ -22,6 +22,7 @@ alias apinfo='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/
 #alias ss="script/server"
 alias rt="rake test"
 alias mvimt="mvim -c 'NERDTree'"
+alias s="source ~/.bashrc"
 
 function cl () {
    if [ $# = 0 ]; then
