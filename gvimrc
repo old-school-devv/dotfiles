@@ -19,7 +19,7 @@ if has("gui_macvim")
 	" RG auf Alt-Cmd umgestellt
   map <M-D-Left> :bp<CR>
   " switch to next buffer
-  map <M-D-Right> :bN<CR>
+  map <M-D-Right> :bn<CR>
 	
 	"  set guifont=Monaco:h12
 	"  set guioptions-=T  " remove toolbar
