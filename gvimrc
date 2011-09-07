@@ -21,6 +21,10 @@ if has("gui_macvim")
   " switch to next buffer
   map <M-D-Right> :bn<CR>
 	
+	" wg. Markdown und Marked
+	" http://captainbollocks.tumblr.com/post/9858989188/linking-macvim-and-marked-app
+	:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+
 	"  set guifont=Monaco:h12
 	"  set guioptions-=T  " remove toolbar
 	"  set guicursor=a:blinkon0
