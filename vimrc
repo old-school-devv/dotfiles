@@ -7,7 +7,8 @@ call pathogen#helptags()
 filetype plugin indent on
 " colorscheme ir_black
 " colorscheme digerati
-colorscheme jellybeans-rg 
+" colorscheme jellybeans-rg 
+colorscheme vividchalk
 syntax on
 
 " mehr statusline: http://dailyvim.tumblr.com/post/1048170831/the-status-line
