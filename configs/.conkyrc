@@ -1,0 +1,71 @@
+double_buffer yes
+update_interval 10.0
+background yes
+
+own_window yes
+own_window_transparent yes
+own_window_hints undecorated,below,skip_taskbar
+
+use_xft yes
+override_utf8_locale no
+xftfont Bitstream Vera Sans Mono:size=7
+xftalpha 0.8
+draw_shades no
+draw_outline no
+draw_borders no
+uppercase yes
+use_spacer none
+
+border_margin 9
+border_width 0
+
+default_color black
+default_shade_color black
+default_outline_color black
+
+alignment middle_right
+minimum_size 200
+gap_x 9
+gap_y 9
+
+TEXT
+${alignc}${time %I:%M %p}, ${time %a}., ${time %b. %e}, ${time %G}
+${alignc}Debian Linux $kernel
+${alignc}hostname $nodename at ${addr ra0}
+${alignc}${execi 1000 cat /proc/cpuinfo | grep 'model name' | sed -e's/model name.*: //'}
+${alignc}$uptime uptime
+
+CPU Load: ${alignr}$cpu%
+${cpugraph 20,200 000000 ffffff}
+Load averages: ${alignr}$loadavg
+
+Processes: ${alignr}$running_processes of $processes running
+Highest CPU usage:
+${color yellow} ${top name 1}${alignr}${top cpu 1}
+${color}${top name 2}${alignr}${top cpu 2}
+${top name 3}${alignr}${top cpu 3}
+${top name 4}${alignr}${top cpu 4}
+Highest memory usage:
+${color yellow} ${top_mem name 1}${alignr}${top_mem mem 1}
+${color}${top_mem name 2}${alignr}${top_mem mem 2}
+${top_mem name 3}${alignr}${top_mem mem 3}
+${top_mem name 4}${alignr}${top_mem mem 4}
+
+Resources:
+Memory usage: ${alignr}${memperc}% (${mem}b/${memmax}b)
+${membar 3,200}
+Swap usage: ${alignr}${swapperc}% (${swap}b/${swapmax}b)
+${swapbar 3,200}
+HDD free: ${alignr}${fs_free_perc /}% (${fs_free /}b/${fs_size /}b)
+${fs_bar 3,200 /}
+
+
+$color Wifi Quality: ${color #000000}${wireless_link_bar wlan0}
+
+
+NET:
+Up:${alignr}${upspeed ra0}Kbps, ${totalup ra0}b total
+${upspeedgraph ra0 20,200 000000 ffffff}
+Down: ${alignr}${downspeed ra0}Kbps, ${totaldown ra0}b total
+${downspeedgraph ra0 20,200 000000 ffffff}
+

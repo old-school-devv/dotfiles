@@ -1,0 +1,109 @@
+# The Bar && Font
+i: /usr/share/wbar/iconpack/wbar.osx/osxbarback.png
+t: /usr/share/wbar/iconpack/wbar.osx/font/12
+c: 
+
+i: /usr/share/icons/oxygen/48x48/apps/utilities-terminal.png
+c: urxvtc -tr -tint black -sh 30 -rv -sr -g 120x45
+t: urxvt 
+
+i: /usr/share/icons/nuoveXT2/48x48/apps/xfce-terminal.png
+c: lxterminal 
+t: lxterminal
+
+i: /usr/share/icons/gnome-colors-common/32x32/apps/gnome-eterm.png
+c: Eterm
+t: Eterm
+
+#i: /usr/share/wbar/iconpack/wbar.osx/firefox.png
+i: /usr/share/icons/hicolor/64x64/apps/iceweasel.png
+c: iceweasel
+t: iceweasel
+
+i: /usr/share/icons/hicolor/128x128/apps/arora.png
+c: arora 
+t: arora 
+
+i: /usr/share/icons/gnome-colors-common/32x32/apps/midori.png
+c: midori
+t: midori
+
+i: /usr/share/icons/hicolor/32x32/apps/opera-browser.png
+#i: ~/icons_ralle_gurke/Opera.png
+c: opera
+t: opera 
+
+i: /usr/share/icons/oxygen/64x64/apps/gvim.png
+#i: /home/ralf/icons_ralle_gurke/WritingApp.png 
+c: gvim
+t: gvim
+
+i: /usr/share/icons/hicolor/48x48/apps/emacs23.png
+c: emacs
+t: emacs
+
+i: /usr/share/icons/hicolor/48x48/apps/scribes.png
+c: scribes
+t: scribes
+
+i: /usr/share/icons/gnome-colors-common/32x32/apps/gedit-icon.png
+c: gedit
+t: gedit
+
+i: /usr/share/icons/gnome-colors-common/32x32/apps/miro-128x128.png
+c: miro
+t: miro
+
+i: /usr/share/icons/hicolor/128x128/apps/minitube.png
+c: minitube
+t: minitube
+
+i: /usr/share/icons/hicolor/64x64/apps/psi.png
+c: psi
+t: psi
+
+i: /usr/share/icons/hicolor/48x48/apps/twitter_microblog.png
+c: turpial
+t: turpial
+
+i: /usr/share/icons/Faenza/apps/48/shotwell.png
+c: shotwell
+t: shotwell
+
+i: /usr/share/icons/gnome-colors-common/32x32/apps/mirage.png
+c: mirage
+t: mirage
+
+i: /usr/share/wbar/iconpack/wbar.osx/gimp.png
+c: gimp
+t: gimp
+
+i: /usr/share/icons/gnome-human/32x32/apps/pcmanfm.png
+c: pcmanfm
+t: pcmanfm
+
+i: /usr/share/icons/hicolor/48x48/apps/vlc.png
+c: vlc
+t: vlc
+
+#i: /usr/share/wbar/iconpack/wbar.osx/acroread.png
+i: /usr/share/icons/gnome-colors-common/32x32/apps/xpdf.png
+c: xpdf
+t: xpdf
+
+i: /usr/share/icons/hicolor/128x128/apps/vidalia.png
+c: vidalia 
+t: vidalia
+
+i: /usr/share/icons/hicolor/48x48/apps/audacious.png
+c: audacious
+t: audacious
+
+#i: /usr/share/icons/qwit.png
+#c: pino
+#t: pino
+
+#i: /usr/share/wbar/iconpack/wbar.osx/xmms.png
+#c: Eterm -e alsamixer
+#t: alsamixer
+

@@ -3,15 +3,18 @@
   [Layer]	{2}
 [end]
 [app] (name=lxterminal) (class=Lxterminal)
-  [Dimensions]	{653 464}
+  [Dimensions]	{1024 770}
   [Close]	{yes}
 [end]
 [app] (name=hotot) (class=Hotot)
-  [Dimensions]	{551 686}
-  [Position]	(UPPERLEFT)	{111 26}
+  [Dimensions]	{500 572}
+  [Position]	(UPPERLEFT)	{449 28}
   [Close]	{yes}
 [end]
 [app] (name=pcmanfm) (class=Pcmanfm)
-  [Dimensions]	{917 665}
+  [Dimensions]	{917 671}
+  [Close]	{yes}
+[end]
+[app] (name=xeyes) (class=XEyes)
   [Close]	{yes}
 [end]
