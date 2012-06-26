@@ -15,6 +15,7 @@ alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 alias ga='git add'
 alias gch='git checkout'
 alias gb='git branch'
+alias gsl='git stash list'
 alias mysqlmy='mysql -u root -p'
 alias apinfo='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
 #alias sc="script/console"
