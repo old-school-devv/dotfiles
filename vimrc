@@ -66,6 +66,9 @@ nmap <leader>w <C-w>v<C-w>l
 " split vertikal
 nmap <leader>v :vsplit<CR>
 
+" split horizontal
+nmap <leader>h :split<CR>
+
 " Ack mit Leader a
 nmap <leader>a :Ack 
 
