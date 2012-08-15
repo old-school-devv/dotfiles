@@ -94,8 +94,5 @@ au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.irbrc
 iabbrev dts ---------------------------------------------------<CR><C-R>=strftime("[%d.%m.%Y, %H:%M]")<CR><CR>
 iabbrev dtm ---<CR><CR>## <C-R>=strftime("%d.%m.%Y, %H:%M")<CR><CR><CR>
 
-" Powerline https://github.com/Lokaltog/vim-powerline
-"let g:Powerline_symbols = 'fancy'
-
 " 256 farben im terminal
 set t_Co=256
