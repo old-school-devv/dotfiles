@@ -54,5 +54,8 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%} "
 PROMPT='%{$fg_bold[green]%}%n%{$fg_bold[green]%}@%{$fg_bold[green]%}%m%{$fg_bold[blue]%}:%~ $(git_custom_status)%{$fg_no_bold[magenta]%}[$(~/.rvm/bin/rvm-prompt)]
 %{$reset_color%}$ZSH_PROMPTI '
 
+#path
+export PATH=$HOME/bin:$PATH
+
 #rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
