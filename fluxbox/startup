@@ -18,9 +18,8 @@
 #fbsetbg -C ~/wallpaper/january-11-twisted_winter-768.jpg 
 #fbsetbg -C wallpaper/july-11-unwritten_stories__74-nocal-1024x768.jpg
 #fbsetbg -C ~/wallpaper/soft_and_clean_1024.png
-#fbsetbg -A ~/Pictures/desktop-bilder/kim-holtermand-deserted-city-1680x1050.jpg
+fbsetbg -A ~/Pictures/desktop-bilder/kim-holtermand-deserted-city-1680x1050.jpg
 #fbsetbg -C ~/wallpaper/january-11-another-chance-768.jpg
-fbsetbg -C ~/wallpaper/luke-twyman-wallpaper-1280x800.jpg
 # Maus abbremsen
 xset m 2 10
 

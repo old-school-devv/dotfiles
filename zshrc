@@ -55,7 +55,7 @@ PROMPT='%{$fg_bold[green]%}%n%{$fg_bold[green]%}@%{$fg_bold[green]%}%m%{$fg_bold
 %{$reset_color%}$ZSH_PROMPTI '
 
 #path
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$PATH
 
 #rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
