@@ -61,6 +61,3 @@
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "emacs.d/site-lisp/twittering-mode"]
-	path = emacs.d/site-lisp/twittering-mode
-	url = git://github.com/hayamiz/twittering-mode.git
