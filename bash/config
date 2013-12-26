@@ -46,9 +46,18 @@ txtrst='\e[0m'    # Text Reset
 #export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\] \n∴ "
 #export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\] \n$ "
 
+# Git branch details
+function parse_git_dirty() {
+        [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo " ✗"
+}
+function parse_git_branch() {
+        git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+}
+
 if [ $LANG == "de_DE.UTF-8" ]; then
-	#export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\] \n∴ "
-	export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\]\[$txtpur\][$(~/.rvm/bin/rvm-prompt)] \[$txtrst\]\n∴ "
+	#export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(parse_git_branch)\[$txtrst\] \n∴ "
+	export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] [\$(parse_git_branch)]\[$txtrst\]\[$txtpur\][\$(~/.rvm/bin/rvm-prompt)] \[$txtrst\]\n∴ "
+	
 else
 	#export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\] \n$ "
 	export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\]\[$txtpur\][$(~/.rvm/bin/rvm-prompt)] \[$txtrst\]\n$ "
