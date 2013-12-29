@@ -8,8 +8,8 @@ do
         git fetch origin --tags
         git checkout master
         git pull
-        git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 1
+        git log -n 1 --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
         git submodule update --init --recursive
         cd -
+        git add $s
 done
-
