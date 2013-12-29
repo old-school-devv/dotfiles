@@ -56,7 +56,7 @@ function parse_git_branch() {
 
 function __current_rvm() {
   cur_rvm="`~/.rvm/bin/rvm-prompt 2> /dev/null | tail -n1`"
-  if [ $cur_rvm != "" ]; then
+  if [ "$cur_rvm" != "" ]; then
     echo "[$cur_rvm]"
   else
     echo ""
