@@ -67,3 +67,6 @@
 [submodule "vim/bundle/vim-zenroom2"]
 	path = vim/bundle/vim-zenroom2
 	url = git@github.com:amix/vim-zenroom2.git
+[submodule "vim/bundle/vim-misc"]
+	path = vim/bundle/vim-misc
+	url = git@github.com:xolox/vim-misc.git
