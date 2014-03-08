@@ -99,3 +99,5 @@ set t_Co=256
 
 " do not ask silly questions regarding sessions
 :let g:session_autoload = 'no'
+:let g:session_autosave = 'no'
+
