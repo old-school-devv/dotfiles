@@ -15,6 +15,10 @@ alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 alias glast="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 1 --stat"
 alias ga='git add'
 alias gch='git checkout'
+alias gchm='git checkout master'
+alias gchc='git checkout current_release'
+alias gchd='git checkout dev'
+alias gchcm='git checkout current_release; git merge master; gp; git checkout master'
 alias gb='git branch'
 alias gsl='git stash list'
 alias mysqlmy='mysql -u root -p'
