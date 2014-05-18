@@ -63,6 +63,9 @@ function __current_rvm() {
   fi
 }
 
+# http://superuser.com/questions/419775/with-bash-iterm2-how-to-name-tabs
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+
 if [ $LANG == "de_DE.UTF-8" ]; then
 	#export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(parse_git_branch)\[$txtrst\] \n∴ "
 	export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] [\$(parse_git_branch)]\[$txtrst\]\[$txtpur\]\$(__current_rvm) \[$txtrst\]\n∴ "
