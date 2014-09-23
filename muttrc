@@ -20,7 +20,9 @@ set move=no
 set delete=yes
 set mark_old=no
 set sort=threads
-
+# http://tdi.github.io/2014/09/12/forwarding-messages-with-attachments-in-mutt/
+set mime_forward
+set mime_forward_rest=yes
 
 # wg. Umlauten:
 unset allow_8bit
