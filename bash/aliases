@@ -70,3 +70,7 @@ function sc {
 		./script/console $argv
 	fi
 }
+
+# http://osxdaily.com/2008/03/21/how-to-flush-your-dns-cache-in-mac-os-x/
+alias flushdns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
+
