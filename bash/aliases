@@ -2,7 +2,6 @@ alias lsa='ls -al'
 alias ls='ls -FG'
 alias ll='ls -AGlFTtr'
 alias histories='cat ~/.histories/.bash*'
-alias ql='qlmanage -p "$@" >& /dev/null'
 alias lc="cl"
 alias tcpdumper='sudo tcpdump -s 0 -A -i en1 port 80'
 alias privoxy_start='privoxy /usr/local/etc/privoxy/config'
@@ -23,8 +22,6 @@ alias gb='git branch'
 alias gsl='git stash list'
 alias mysqlmy='mysql -u root -p'
 alias apinfo='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
-#alias sc="script/console"
-#alias ss="script/server"
 alias rt="rake test"
 alias mvimt="mvim -c 'NERDTree'"
 alias s="source ~/.bashrc"
@@ -44,13 +41,7 @@ function mkcd () {
 	cd "$*"
 }
 
-#Edge-Rails
-function edgie() { 
-  ruby ~/rails/edge/railties/bin/rails $1 && cd $1 && ln -s ~/rails/edge vendor/rails && mate . 
-}
-
 # Manpage in Preview anzeigen
-# http://news.ycombinator.com/item?id=1157864
 function pdfman () {
 	man -t $1 | open -a /Applications/Preview.app -f
 }
@@ -71,6 +62,4 @@ function sc {
 	fi
 }
 
-# http://osxdaily.com/2008/03/21/how-to-flush-your-dns-cache-in-mac-os-x/
-alias flushdns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
-
+alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
