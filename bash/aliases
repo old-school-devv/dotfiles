@@ -9,6 +9,7 @@ alias gc='git commit -a -m'
 alias gs='git status'
 alias gp='git push'
 alias gpm='git push origin master:refs/heads/master'
+alias gpom='git pull origin master'
 alias gl='git log --shortstat --color'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glast="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 1 --stat"
