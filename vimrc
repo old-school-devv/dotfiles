@@ -6,10 +6,8 @@ execute pathogen#infect()
 " call pathogen#helptags()
 
 filetype plugin indent on
-" colorscheme ir_black
-" colorscheme digerati
-" colorscheme jellybeans-rg 
-colorscheme vividchalk
+" colorscheme vividchalk
+colorscheme OceanicNext
 syntax on
 
 " mehr statusline: http://dailyvim.tumblr.com/post/1048170831/the-status-line
