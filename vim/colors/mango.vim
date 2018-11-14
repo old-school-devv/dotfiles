@@ -1,141 +1,135 @@
 " Vim color file -- Mango
 " Maintainer:   Josh Perez <josh@goatslacker.com>
-" Version: 1.2
+" Version: 1.5.1
 
-set background=dark
-set t_Co=256
-let g:colors_name = "mango"
+" mango.vim {{{
+  set t_Co=256
+  let g:colors_name = "mango"
+  let bgcolor = &background
+  highlight clear SignColumn
+" }}}
 
-" Colors: {
-hi Black    ctermfg=240         ctermbg=NONE        cterm=NONE
-hi Blue     ctermfg=68          ctermbg=NONE        cterm=NONE
-hi Green    ctermfg=107         ctermbg=NONE        cterm=NONE
-hi Orange   ctermfg=214         ctermbg=NONE        cterm=NONE
-hi Peach    ctermfg=222         ctermbg=NONE        cterm=NONE
-hi Pink     ctermfg=205         ctermbg=NONE        cterm=NONE
-hi Pink2    ctermfg=211         ctermbg=NONE        cterm=NONE
-hi Purple   ctermfg=153         ctermbg=NONE        cterm=NONE
-hi Purple2  ctermfg=164         ctermbg=NONE        cterm=NONE
-hi Red      ctermfg=203         ctermbg=NONE        cterm=NONE
-hi Silver   ctermfg=245         ctermbg=NONE        cterm=NONE
-hi White    ctermfg=255         ctermbg=NONE        cterm=NONE
-" }
+" Colors: {{{
+  if bgcolor == "light"
+    let Black = "guifg=#444444 guibg=NONE gui=NONE ctermfg=238 ctermbg=NONE cterm=NONE"
+    let Orange = "guifg=#ff5f00 guibg=NONE gui=NONE ctermfg=202 ctermbg=NONE cterm=NONE"
+    let Peach = "guifg=#ff875f guibg=NONE gui=NONE ctermfg=209 ctermbg=NONE cterm=NONE"
+    let Red = "guifg=#ff0000 guibg=NONE gui=NONE ctermfg=196 ctermbg=NONE cterm=NONE"
+  endif
+  if bgcolor == "dark"
+    let Black = "guifg=#585858 guibg=NONE gui=NONE ctermfg=240 ctermbg=NONE cterm=NONE"
+    let Orange = "guifg=#ffaf00 guibg=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE"
+    let Peach = "guifg=#ffd787 guibg=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE"
+    let Red = "guifg=#ff5f5f guibg=NONE gui=NONE ctermfg=203 ctermbg=NONE cterm=NONE"
+  endif
 
-" SyntaxHighlighting: {
-hi CursorLine     ctermfg=NONE        ctermbg=234         cterm=NONE
-hi Normal         ctermfg=255         ctermbg=NONE        cterm=NONE
-hi Comment        ctermfg=240         ctermbg=NONE        cterm=NONE
-hi Constant       ctermfg=68          ctermbg=NONE        cterm=NONE
-hi String         ctermfg=107         ctermbg=NONE        cterm=NONE
-hi Character      ctermfg=68          ctermbg=NONE        cterm=NONE
-hi Number         ctermfg=203         ctermbg=NONE        cterm=NONE
-hi Boolean        ctermfg=203         ctermbg=NONE        cterm=NONE
-hi Float          ctermfg=203         ctermbg=NONE        cterm=NONE
-hi Identifier     ctermfg=68          ctermbg=NONE        cterm=NONE
-hi Function       ctermfg=205         ctermbg=NONE        cterm=NONE
-hi Statement      ctermfg=214         ctermbg=NONE        cterm=NONE
-hi Conditional    ctermfg=222         ctermbg=NONE        cterm=NONE
-hi Repeat         ctermfg=222         ctermbg=NONE        cterm=NONE
-hi Label          ctermfg=222         ctermbg=NONE        cterm=NONE
-hi Operator       ctermfg=215         ctermbg=NONE        cterm=NONE
-hi Keyword        ctermfg=222         ctermbg=NONE        cterm=NONE
-hi Exception      ctermfg=203         ctermbg=NONE        cterm=NONE
-hi PreProc        ctermfg=222         ctermbg=NONE        cterm=NONE
-hi Include        ctermfg=153         ctermbg=NONE        cterm=NONE
-hi Define         ctermfg=222         ctermbg=NONE        cterm=NONE
-hi Macro          ctermfg=153         ctermbg=NONE        cterm=NONE
-hi PreCondit      ctermfg=153         ctermbg=NONE        cterm=NONE
-hi Type           ctermfg=214         ctermbg=NONE        cterm=NONE
-hi StorageClass   ctermfg=255         ctermbg=NONE        cterm=NONE
-hi Structure      ctermfg=222         ctermbg=NONE        cterm=NONE
-hi Typedef        ctermfg=164         ctermbg=NONE        cterm=NONE
-hi Special        ctermfg=211         ctermbg=NONE        cterm=NONE
-hi SpecialChar    ctermfg=211         ctermbg=NONE        cterm=NONE
-hi Tag            ctermfg=68          ctermbg=NONE        cterm=NONE
-hi Delimiter      ctermfg=255         ctermbg=NONE        cterm=NONE
-hi SpecialComment ctermfg=68          ctermbg=NONE        cterm=NONE
-hi Debug          ctermfg=68          ctermbg=NONE        cterm=NONE
-hi Underlined     ctermfg=NONE        ctermbg=NONE        cterm=underline
-hi Ignore         ctermfg=68          ctermbg=NONE        cterm=NONE
-hi Error          ctermfg=255         ctermbg=196         cterm=NONE
-hi Todo           ctermfg=232         ctermbg=220         cterm=NONE
-" }
+  let Green = "guifg=#87af5f guibg=NONE gui=NONE ctermfg=107 ctermbg=NONE cterm=NONE"
+  let Gray = "guifg=#bcbcbc guibg=NONE gui=NONE ctermfg=250 ctermbg=NONE cterm=NONE"
+  let Blue = "guifg=#5fafdf guibg=NONE gui=NONE ctermfg=74 ctermbg=NONE cterm=NONE"
+  let Pink = "guifg=#ff5faf guibg=NONE gui=NONE ctermfg=205 ctermbg=NONE cterm=NONE"
+  let Purple = "guifg=#af87ff guibg=NONE gui=NONE ctermfg=141 ctermbg=NONE cterm=NONE"
+  let Silver = "guifg=#8a8a8a guibg=NONE gui=NONE ctermfg=245 ctermbg=NONE cterm=NONE"
+  let White = "guifg=#eeeeee guibg=NONE gui=NONE ctermfg=255 ctermbg=NONE cterm=NONE"
+" }}}
 
-" JavaScript: {
-" Other
-hi link javaScriptSpecial               Pink
-hi link javaScriptFloat                 Red
+" Light Background: {{{
+  if bgcolor == "light"
+    exe "hi Boolean "         .Red
+    exe "hi Constant "        .Purple
+    exe "hi Character "       .Green
+    exe "hi Comment "         .Gray
+    exe "hi Conditional "     .Peach
+    exe "hi Debug "           .Gray
+    exe "hi Define "          .Purple
+    exe "hi Delimiter "       .Black
+    exe "hi Exception "       .Peach
+    exe "hi Float "           .Blue
+    exe "hi Function "        .Black
+    exe "hi Identifier "      .Black
+    exe "hi Ignore "          .Blue
+    exe "hi Include "         .Purple
+    exe "hi Keyword "         .Peach
+    exe "hi Label "           .Peach
+    exe "hi LineNr "          .Gray
+    exe "hi Macro "           .Purple
+    exe "hi Noise "           .Silver
+    exe "hi Normal "          .Black
+    exe "hi Number "          .Blue
+    exe "hi Operator "        .Peach
+    exe "hi PreCondit "       .Purple
+    exe "hi PreProc "         .Purple
+    exe "hi Repeat "          .Peach
+    exe "hi Special "         .Pink
+    exe "hi SpecialChar "     .Pink
+    exe "hi SpecialComment "  .Blue
+    exe "hi Statement "       .Peach
+    exe "hi StorageClass "    .Orange
+    exe "hi String "          .Green
+    exe "hi Structure "       .Orange
+    exe "hi Tag "             .Black
+    exe "hi Type "            .Orange
+    exe "hi TypeDef "         .Orange
 
-" Browser/DOM
-hi link javaScriptHtmlEvents            Pink2
-hi link javaScriptDomElemAttrs          Purple
-hi link javaScriptHtmlElemAttrs         Purple
-hi link javaScriptHtmlElemFuncs         Pink
-hi link javaScriptCssStyles             Purple
+    hi CursorLine   guifg=NONE      guibg=#ffffff   gui=NONE      ctermfg=NONE      ctermbg=231       cterm=NONE
+    hi ColorColumn  guifg=#ff0000   guibg=#ffffff   gui=NONE      ctermfg=203       ctermbg=231       cterm=NONE
+  endif
+" }}}
+" Dark Background: {{{
+  if bgcolor == "dark"
+    exe "hi Boolean "         .Red
+    exe "hi Constant "        .Purple
+    exe "hi Character "       .Green
+    exe "hi Comment "         .Black
+    exe "hi Conditional "     .Peach
+    exe "hi Debug "           .Black
+    exe "hi Define "          .Purple
+    exe "hi Delimiter "       .White
+    exe "hi Exception "       .Peach
+    exe "hi Float "           .Blue
+    exe "hi Function "        .White
+    exe "hi Identifier "      .White
+    exe "hi Ignore "          .Blue
+    exe "hi Include "         .Purple
+    exe "hi Keyword "         .Peach
+    exe "hi Label "           .Peach
+    exe "hi LineNr "          .Black
+    exe "hi Macro "           .Purple
+    exe "hi Normal "          .White
+    exe "hi Noise "           .White
+    exe "hi Number "          .Blue
+    exe "hi Operator "        .Peach
+    exe "hi PreCondit "       .Purple
+    exe "hi PreProc "         .Purple
+    exe "hi Repeat "          .Peach
+    exe "hi Special "         .Pink
+    exe "hi SpecialChar "     .Pink
+    exe "hi SpecialComment "  .Pink
+    exe "hi Statement "       .Peach
+    exe "hi StorageClass "    .Orange
+    exe "hi String "          .Green
+    exe "hi Structure "       .Orange
+    exe "hi Tag "             .White
+    exe "hi Type "            .Orange
+    exe "hi TypeDef "         .Orange
 
-" JSDoc
-hi link javaScriptDocType         Blue
-hi link javaScriptDocTypeNoParam  Blue
-hi link javaScriptDocParam        Silver
+    hi CursorLine   guifg=NONE      guibg=#1c1c1c   gui=NONE      ctermfg=NONE      ctermbg=234       cterm=NONE
+    hi ColorColumn  guifg=#ff0000   guibg=#1c1c1c   gui=NONE      ctermfg=203       ctermbg=234       cterm=NONE
+  endif
+" }}}
 
-" JavaScript
-"syntax keyword javaScriptPrototype      prototype
-hi link javaScriptPrototype       Pink2
-"syntax keyword javaScriptSource         import export
-hi link javaScriptSource          Red
-"syntax keyword javaScriptType           const undefined var void yield
-hi link javaScriptType            Orange
-"syntax keyword javaScriptOperator       delete new in instanceof let typeof
-hi link javaScriptOperator        Orange
-"syntax keyword javaScriptBoolean        true false
-hi link javaScriptBoolean         Red
-"syntax keyword javaScriptNull           null
-hi link javaScriptNull            Purple
-"syntax keyword javaScriptThis           this self
-"syntax keyword javaScriptConditional    if else
-hi link javaScriptConditional     Peach
-"syntax keyword javaScriptRepeat         do while for
-hi link javaScriptRepeat          Peach
-"syntax keyword javaScriptBranch         break continue switch case default return
-hi link javaScriptBranch          Orange
-"syntax keyword javaScriptStatement      try catch throw with finally
-hi link javaScriptStatement       Red
-"syntax keyword javaScriptGlobalObjects  Array Boolean Date Function Infinity JavaArray JavaClass JavaObject JavaPackage kind Math Number NaN Object Packages RegExp String Undefined java netscape sun
-hi link javaScriptGlobalObjects   Purple
-"syntax keyword javaScriptExceptions     Error EvalError RangeError ReferenceError SyntaxError TypeError URIError
-hi link javaScriptExceptions      Red
-"syntax keyword javaScriptFutureKeys     abstract enum int short boolean export interface static byte extends long super char final native synchronized class float package throws goto private transient debugger implements protected volatile double import public
-hi link javaScriptFutureKeys      Black
-"  }
+hi Error        guifg=#eeeeee   guibg=#ff0000   gui=NONE      ctermfg=255       ctermbg=196       cterm=NONE
+hi Todo         guifg=#080808   guibg=#ffd700   gui=NONE      ctermfg=232       ctermbg=220       cterm=NONE
+hi Underlined   guifg=NONE      guibg=NONE      gui=underline ctermfg=NONE      ctermbg=NONE      cterm=underline
 
-" PHP: {
-hi link phpFunctions          Pink
-" }
+" MIT LICENSE {{{
+" The MIT License (MIT)
+" Copyright 2012 Josh Perez, http://www.goatslacker.com
+"
+" Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+"
+" The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+"
+" THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+" }}}
 
-" HTML: {
-hi link htmlTag               Blue
-hi link htmlTagName           Blue
-"}
-
-" Python: {
-hi link pythonPreCondit       Blue
-" }
-
-" CSS_LESS: {
-hi link lessVariable      Blue
-hi link lessFunction      Purple
-hi link lessFuncDef       Purple
-hi link cssBraces         Peach
-hi link cssTagName        Orange
-hi link cssClassName      Peach
-hi link cssCommonAttr     Pink
-hi link cssFontAttr       Pink
-hi link cssTextAttr       Pink
-hi link cssBoxAttr        Pink
-hi link cssColorAttr      Pink
-hi link cssRenderAttr     Pink
-hi link cssTableAttr      Pink
-hi link cssAuralAttr      Pink
-hi link cssUIAttr         Pink
-hi link cssGeneratedContentAttr      Pink
-"}
+" vim:foldmethod=marker:foldlevel=0

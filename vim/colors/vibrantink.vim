@@ -27,8 +27,8 @@ endif
 let g:colors_name = "vibrantink"
 
 if has("gui_running")
-    highlight Normal guifg=White   guibg=#141414
-    highlight Cursor guifg=#141414   guibg=Yellow
+    highlight Normal guifg=White   guibg=Black
+    highlight Cursor guifg=Black   guibg=Yellow
     highlight Keyword guifg=#FF6600
     highlight Define guifg=#FF6600
     highlight Comment guifg=#9933CC
@@ -45,13 +45,10 @@ if has("gui_running")
     highlight String guifg=#66FF00
     highlight Search guibg=White
     highlight CursorLine guibg=#323300
-		highlight LineNr guifg=#888888	guibg=#E3E3E3
-		highlight StatusLine guibg=#888888	guifg=#E3E3E3
-		highlight StatusLineNC guifg=#444444	guibg=#E3E3E3
 else
     set t_Co=256
-    highlight Normal ctermfg=White ctermbg=#141414 
-    highlight Cursor ctermfg=#141414 ctermbg=Yellow 
+    highlight Normal ctermfg=White ctermbg=Black 
+    highlight Cursor ctermfg=Black ctermbg=Yellow 
     highlight Keyword ctermfg=202 
     highlight Define ctermfg=202 
     highlight Comment ctermfg=98
