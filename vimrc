@@ -94,7 +94,3 @@ iabbrev dtm ---<CR><CR>## <C-R>=strftime("%d.%m.%Y, %H:%M")<CR><CR><CR>
 " 256 farben im terminal
 set t_Co=256
 
-" do not ask silly questions regarding sessions
-:let g:session_autoload = 'no'
-:let g:session_autosave = 'no'
-
