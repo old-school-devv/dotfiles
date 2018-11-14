@@ -87,8 +87,8 @@ au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.irbrc
 
 " füge eine zeile mit datum als trenner ein
 " nach http://0x7c0.wordpress.com/2009/06/18/vim-abbreviations/
-iabbrev dts ---------------------------------------------------<CR><C-R>=strftime("[%d.%m.%Y, %H:%M]")<CR><CR>
-iabbrev dtm ---<CR><CR>## <C-R>=strftime("%d.%m.%Y, %H:%M")<CR><CR><CR>
+iabbrev dts ---------------------------------------------------<CR><C-R>=strftime("[%d.%m.%y, %H:%M]")<CR><CR>
+iabbrev dtm ---<CR><CR>## <C-R>=strftime("%d.%m.%y, %H:%M")<CR><CR><CR>
 
 " 256 farben im terminal
 set t_Co=256
