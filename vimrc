@@ -49,9 +49,6 @@ set listchars=tab:¿\ ,eol:¬
 " Shortcut minibufexplorer
 nmap <leader>b :MiniBufExplorer<CR>
 
-" keine ruby-warnung beum lusty-juggler
-let g:LustyJugglerSuppressRubyWarning = 1
-
 function! s:Terminal()
   execute 'ConqueTermSplit bash --login'
 endfunction
