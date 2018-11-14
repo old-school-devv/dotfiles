@@ -1,8 +1,9 @@
 set nocompatible
 let mapleader=","
 
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+execute pathogen#infect()
+" call pathogen#runtime_append_all_bundles()
+" call pathogen#helptags()
 
 filetype plugin indent on
 " colorscheme ir_black
