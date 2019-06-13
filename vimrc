@@ -93,3 +93,5 @@ iabbrev dtm ---<CR><CR>## <C-R>=strftime("%d.%m.%y, %H:%M")<CR><CR><CR>
 " 256 farben im terminal
 set t_Co=256
 
+" wg. https://thehackernews.com/2019/06/linux-vim-vulnerability.html
+set nomodeline
