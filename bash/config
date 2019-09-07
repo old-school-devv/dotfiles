@@ -48,7 +48,9 @@ txtrst='\e[0m'    # Text Reset
 
 # Git branch details
 function parse_git_dirty() {
-  [[ $(git status 2> /dev/null | tail -n1) != *"working tree clean"* ]] && [[ $(git status 2> /dev/null | tail -n1) != *"nichts zu committen"* ]] && echo " ✗"
+  smsg=$(git status 2> /dev/null | tail -n1);
+  #echo $smsg
+  [[ $smsg != *"working tree clean"* ]] && [[ $smsg != *"nichts zu committen"* ]] && echo " ✗"
 }
 
 function parse_git_branch() {
