@@ -5,12 +5,12 @@
 " http://github.com/coderifous/dotfiles/blob/master/vim/gvimrc
 if has("gui_macvim")
   set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
-	set transparency=7
-	set gfn=Anonymous\ Pro:h14
+	" set transparency=7
+	set gfn=Anonymous\ Pro:h15
 	set columns=154
 	set lines=44
 	" PeepOpen auf CommandT:
-	map <D-t> <Plug>PeepOpen
+	" map <D-t> <Plug>PeepOpen
 	" Symbolleiste weg:
 	set guioptions=egmrt
 	

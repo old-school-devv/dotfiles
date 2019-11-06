@@ -7,7 +7,7 @@ execute pathogen#infect()
 
 filetype plugin indent on
 " colorscheme vividchalk
-colorscheme OceanicNext
+colorscheme onedark
 syntax on
 
 " mehr statusline: http://dailyvim.tumblr.com/post/1048170831/the-status-line
