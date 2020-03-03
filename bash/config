@@ -50,7 +50,7 @@ txtrst='\e[0m'    # Text Reset
 function parse_git_dirty() {
   smsg=$(git status 2> /dev/null | tail -n1);
   #echo $smsg
-  [[ $smsg != *"working tree clean"* ]] && [ $smsg != *"working directory clean"* ]] && [[ $smsg != *"nichts zu committen"* ]] && echo " ✗"
+  [[ $smsg != *"working tree clean"* ]] && [[ $smsg != *"working directory clean"* ]] && [[ $smsg != *"nichts zu committen"* ]] && echo " ✗"
 }
 
 function parse_git_branch() {
