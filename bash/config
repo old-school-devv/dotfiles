@@ -58,11 +58,13 @@ function parse_git_branch() {
 }
 
 function __current_rvm() {
-  cur_rvm="`~/.rvm/bin/rvm-prompt 2> /dev/null | tail -n1`"
-  if [ "$cur_rvm" != "" ]; then
-    echo "[$cur_rvm]"
-  else
-    echo ""
+  if [ -f ~/.rvm/bin/rvm-prompt ]; then
+    cur_rvm="`~/.rvm/bin/rvm-prompt 2> /dev/null | tail -n1`"
+    if [ "$cur_rvm" != "" ]; then
+      echo "[$cur_rvm]"
+    else
+      echo ""
+    fi
   fi
 }
 
@@ -70,10 +72,12 @@ function __current_rvm() {
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 
 if [ $LANG == "de_DE.UTF-8" ]; then
-	#export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(parse_git_branch)\[$txtrst\] \n∴ "
 	export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] [\$(parse_git_branch)]\[$txtrst\]\[$txtpur\]\$(__current_rvm) \[$txtrst\]\n∴ "
 	
 else
-	#export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\] \n$ "
-	export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\]\[$txtpur\][$(~/.rvm/bin/rvm-prompt)] \[$txtrst\]\n$ "
+  if [ -f ~/.rvm/bin/rvm-prompt ]; then
+    export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\]\[$txtpur\][$(~/.rvm/bin/rvm-prompt)] \[$txtrst\]\n$ "
+  else
+    export PS1="\[$bldgrn\]\u@\h:\[$bldblu\]\w\[$txtcyn\] $(vcprompt)\[$txtrst\]\n$ "
+  fi
 fi
